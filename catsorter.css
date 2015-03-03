@@ -1,0 +1,46 @@
+#shuffle{
+  background-color: #6495ED;
+  font-size: 40px;
+  border-style: dashed;
+  border-color: #cdc8b1;
+  border-width: 10px;
+  color: yellow;
+  text-align: center;
+  width: 270px;
+  margin: 0 auto;
+  font-family: futura, bold;
+  }
+
+#top{
+  font-size: 50px;
+  text-align:right;
+  font-family: futura, bold;
+  color: white;
+}
+.cats{
+  width:100px;
+  height:100px;
+  display:block;
+}
+
+.legs{
+  width:100px;
+  height:100px;
+  display:block;
+}
+.combo{
+  display:inline-block;
+  border-style: solid;
+  border: solid;
+  border-color:#BEBEBE;
+  border-width: 1px;
+}
+#deck{
+  max-width: 820px;
+  margin:0 auto;
+
+  
+}
+body{
+  background-color: #ff7256;
+}

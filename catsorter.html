@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html>
+<head>
+  <title>!!!CAT SORTER!!</title>
+  <link rel="stylesheet" href="catsorter.css"/>
+</head>
+<body>
+  <header>
+    <p1 id="top">WELCOME TO THE INLINE-SKATE / CAT-STARCH-HEAD-ACCESSORY SHUFFLING ALGORITHM!</p1>
+   <section id="shuffle">SHUFFLE</section>
+  </header>
+  <div id="deck">
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+  </script>
+  <script type="text/javascript">
+    function Card(c, l) {
+      this.cat = c; 
+      this.leg = l;
+      this.toHTML = function() {
+        return "<p class='combo'>" + this.cat + this.leg + "</li>";
+      }
+    }
+    function Deck() {
+      var thisDeck = this;
+      this.cats = [
+        '<img class="cats" src ="https://s-media-cache-ak0.pinimg.com/236x/02/a9/4b/02a94bea74be66e60aa7164505a4cf8c.jpg">',
+        '<img class="cats" src ="https://s-media-cache-ak0.pinimg.com/236x/35/79/80/357980a3ce53998b59abcf61ed80da8c.jpg">',
+        '<img class="cats" src ="http://unmaintained.com/wp-content/uploads/Cat-Breading-Charlie.jpg">',
+        '<img class="cats" src="http://i.imgur.com/Jb1IX8R.jpg">'
+      ];
+      this.legs = [
+      '<img class="legs" src="http://thumbs.dreamstime.com/z/rollerblades-roller-skater-legs-19098969.jpg">',
+      '<img class="legs" src="http://www.ballnroll.com/Uploads/Blogs/Fitness/rollerblade.jpg">',
+      '<img class="legs" src="http://thumb1.shutterstock.com/display_pic_with_logo/382084/152010698/stock-photo-close-up-view-of-female-legs-in-roller-blades-152010698.jpg">',
+      '<img class="legs" src="http://thumbs.dreamstime.com/z/female-legs-roller-blades-close-up-view-33268340.jpg">'
+
+      ];
+      $.each(thisDeck.legs, function() {
+        var leg = this;
+        $.each(thisDeck.cats, function() {
+          var cat = this;
+          var card = new Card(cat, leg);
+          $('#deck').append(card.toHTML());
+        });
+      });
+    }
+    var shuffle = function(){
+      var m = $('.combo').length, rand;
+      while(m){
+        rand = Math.floor(Math.random() * m--);
+        $rand = $('p:eq(' + rand + ')');
+        $('p:eq(' + m + ')').after($rand).insertBefore($('p:eq(' + rand +')'));
+      }
+    };
+    var deck = new Deck();
+        $('#shuffle').on('click', function(){
+  shuffle();
+});
+    
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
